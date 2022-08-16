@@ -1,0 +1,1 @@
+window.alert("the script file is connected");
