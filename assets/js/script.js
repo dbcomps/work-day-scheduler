@@ -24,10 +24,19 @@ $(".time-block").each(function() {
 	}
 })
 
+
+$(document).ready(function() {
+
 $(".saveBtn").on('click', function() {
 	var blockText = $(this).siblings(".description").val();
 	var blockHour = $(this).parent().attr("id");
 	console.log(blockText);
 	console.log(blockHour);
+	
+	localStorage.setItem(blockHour, blockText);
+});
+
+	$("#9 .description").val(localStorage.getItem("9"));
+
 
 })
