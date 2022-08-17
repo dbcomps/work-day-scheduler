@@ -9,7 +9,7 @@ console.log(currentHour);
 
 $(".time-block").each(function() {
 	// go through all the time-block class elements and get the hour for that time block
-	// added an id to uniquely identify each time-block and convert to integer
+	// added an id to uniquely identify each time-block and convert string to integer
 	var hourBlock = parseInt($(this).attr("id"));
 	console.log(hourBlock);
 	
@@ -22,4 +22,12 @@ $(".time-block").each(function() {
 	else {
 		$(this).addClass("present");
 	}
+})
+
+$(".saveBtn").on('click', function() {
+	var blockText = $(this).siblings(".description").val();
+	var blockHour = $(this).parent().attr("id");
+	console.log(blockText);
+	console.log(blockHour);
+
 })
