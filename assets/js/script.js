@@ -1,4 +1,4 @@
-var currentDayTime = moment().format('MMMM Do YYYY, h:mm a');
+var currentDayTime = moment().format('MMMM Do YYYY');
 console.log(currentDayTime);
 
 $("#currentDay").html(currentDayTime);
